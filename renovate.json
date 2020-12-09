@@ -1,3 +1,34 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "platform": "github",
+  "user": "marius-carp",
+  "logFileLevel": "debug",
+  "logLevel": "debug",
+  "token": "token",
+  "extends": [
+    "config:base"
+  ],
+  "repositories": [
+    "marius-carp/renovate-test-scala"
+  ],
+  "hostRules": [
+    {
+      "hostType": "maven",
+      "endpoint": "https://artifactory.domain.tools/artifactory/domain-release-sbt/",
+      "username": "username",
+      "password": "password"
+    }
+  ],
+  "packageRules": [
+    {
+      "managers": [
+        "sbt"
+      ],
+      "automerge": false,
+      "registryUrls": [" https://artifactory.domain.tools/artifactory/domain-release-sbt/"]
+    }
+  ],
+  "sbt": {
+    "enabled": true
+  }
 }
