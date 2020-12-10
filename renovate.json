@@ -1,7 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "platform": "github",
-  "user": "marius-carp",
   "logFileLevel": "debug",
   "logLevel": "debug",
   "token": "token",
