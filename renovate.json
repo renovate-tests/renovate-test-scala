@@ -12,7 +12,6 @@
   ],
   "hostRules": [
     {
-      "hostType": "maven",
       "endpoint": "https://mariuscarp.jfrog.io/artifactory/frunza/",
       "username": "marius.carp",
       "password": "Admin123!"
