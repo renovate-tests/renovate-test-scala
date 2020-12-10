@@ -13,9 +13,9 @@
   "hostRules": [
     {
       "hostType": "maven",
-      "endpoint": "https://artifactory.domain.tools/artifactory/domain-release-sbt/",
-      "username": "username",
-      "password": "password"
+      "endpoint": "https://mariuscarp.jfrog.io/artifactory/frunza/",
+      "username": "marius.carp",
+      "password": "Admin123!"
     }
   ],
   "packageRules": [
@@ -24,7 +24,7 @@
         "sbt"
       ],
       "automerge": false,
-      "registryUrls": [" https://artifactory.domain.tools/artifactory/domain-release-sbt/"]
+      "registryUrls": ["https://mariuscarp.jfrog.io/artifactory/frunza/"]
     }
   ],
   "sbt": {

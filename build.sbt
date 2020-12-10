@@ -2,7 +2,7 @@ name := "renovate-test-scala"
 
 version := "0.1"
 
-scalaVersion := "2.13.3"
+scalaVersion := "2.13.4"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint")
 
@@ -23,15 +23,16 @@ scalacOptions := Seq(
   "-Ymacro-annotations"
 )
 
-credentials += Credentials(Path.userHome / ".ivy2" / ".credentials.domain")
+resolvers +=
+  "Artifactory" at "https://mariuscarp.jfrog.io/artifactory/frunza/"
 
-resolvers ++= Seq(
-  "Sefaira Releases" at "https://artifactory.domain.tools/artifactory/domain-release-sbt"
-)
+publishTo := Some("Artifactory Realm" at "https://mariuscarp.jfrog.io/artifactory/frunza")
+credentials += Credentials("Artifactory Realm", "mariuscarp.jfrog.io", "marius.carp", "Admin123!")
+
 
 // Sefaira dependencies
 libraryDependencies ++= Seq(
-  "com.domain"                 %% "lib-accounts"             %  "15.0.0",
+  "com.frunza"                 %% "lib-accounts"             %  "0.1",
   "com.typesafe.akka"          %% "akka-actor"               %  "2.6.9"
 
 )
